@@ -5,16 +5,13 @@ Future<String> fetchData() {
   });
 }
 
-void getSafeMessage() async {
+void main() async{
   try {
     String message = await fetchData();
     print('Result: $message');
   } catch (e) {
     print('Caught an error: $e');
   }
-}
 
-void main() {
-  getSafeMessage();
   print('Still running even if something goes wrong.');
 }
