@@ -5,13 +5,10 @@ Future<String> getNameLater() {
   });
 }
 
-void showMessage() async {
+void main() async{
   print('Getting your name...');
   String message = await getNameLater();
   print(message);
-}
-
-void main() {
-  showMessage();
+  
   print('This runs while waiting...');
 }
